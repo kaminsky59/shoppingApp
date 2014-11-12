@@ -15,19 +15,12 @@ import android.view.ViewGroup;
 import android.os.Build;
 import android.widget.FrameLayout;
 
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
-
-public class MainPageActivity extends ActionBarActivity {
-
-    private CameraPreview mPreview;
-    private CameraManager mCameraManager;
-    private HoverView mHoverView;
+public class BarcodeCamActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_scan);
+        setContentView(R.layout.barcode_cam);
 
        /* Display display = getWindowManager().getDefaultDisplay();
         mHoverView = (HoverView)findViewById(R.id.hover_view);
@@ -62,25 +55,6 @@ public class MainPageActivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-    public void MainScan_Scan(View v)
-    {
-        IntentIntegrator scanIntegrator = new IntentIntegrator(this);
-        scanIntegrator.initiateScan();
-
-        //startActivity(new Intent(MainPageActivity.this, BarcodeCamActivity.class));
-    }
-
-    public void onActivityResult(int requestCode, int resultCode, Intent intent)
-    {
-        //Scan Result
-    }
-
-    public void CartPressed(View v)
-    {
-        startActivity(new Intent(MainPageActivity.this, CartActivity.class));
-    }
-
 
     /**
      * A placeholder fragment containing a simple view.

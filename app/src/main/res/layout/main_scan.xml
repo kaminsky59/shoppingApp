@@ -11,15 +11,22 @@
         android:layout_height="wrap_content"
         android:text="Cart"
         android:id="@+id/CartButton"
+        android:onClick="CartPressed"
         android:layout_gravity="right" />
 
-    <LinearLayout
-        android:orientation="vertical"
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/camera_icon"
+        android:foreground="@drawable/camera_icon"
         android:layout_gravity="center_horizontal">
-    </LinearLayout>
+
+        <Button
+            android:layout_width="245dp"
+            android:layout_height="244dp"
+            android:onClick="MainScan_Scan"
+            android:layout_gravity="top|left|bottom|right"
+            android:background="@android:color/transparent"/>
+    </FrameLayout>
 
     <TextView
         android:layout_width="wrap_content"

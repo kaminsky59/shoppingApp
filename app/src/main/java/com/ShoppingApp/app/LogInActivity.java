@@ -3,16 +3,13 @@ package com.ShoppingApp.app;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.os.Build;
 import android.widget.Toast;
 
 public class LogInActivity extends ActionBarActivity {
@@ -25,13 +22,7 @@ public class LogInActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
-                    .commit();
-        }
+        setContentView(R.layout.login);
 
         applicationContext = getApplicationContext();
     }
@@ -63,7 +54,7 @@ public class LogInActivity extends ActionBarActivity {
         startActivity(new Intent(this, RegisterActivity.class));
     }
 
-    public void Login_SignInClicked(View view)
+    public void Login_SignInClicked(View v)
     {
         //Check for credientials
         //Proceed to next activity if match in database
@@ -71,7 +62,9 @@ public class LogInActivity extends ActionBarActivity {
         //If not throw a Toast saying login failed
         loginToast.makeText(applicationContext, loginFailedText, toastDuration).show();
 
-        startActivity(new Intent(this, MainPageActivity.class));
+        Intent loginIntent = new Intent(LogInActivity.this, MainPageActivity.class);
+
+        startActivity(loginIntent);
     }
 
     /**

@@ -7,5 +7,6 @@
     <string name="RegisterActivity">Register UI Activity</string>
     <string name="LogInActivity">Log In UI Activity</string>
     <string name="MainPageActivity">Main Landing Page UI Activity</string>
+    <string name="title_activity_cart">CartActivity</string>
 
 </resources>

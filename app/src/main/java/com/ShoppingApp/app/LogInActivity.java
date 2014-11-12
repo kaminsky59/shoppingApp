@@ -54,6 +54,7 @@ public class LogInActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+        int i = 0;
         return super.onOptionsItemSelected(item);
     }
 

@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -12,8 +13,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.os.Build;
+import android.widget.FrameLayout;
 
 public class MainPageActivity extends ActionBarActivity {
+
+    private CameraPreview mPreview;
+    private CameraManager mCameraManager;
+    private HoverView mHoverView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +31,18 @@ public class MainPageActivity extends ActionBarActivity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
+
+        Display display = getWindowManager().getDefaultDisplay();
+        mHoverView = (HoverView)findViewById(R.id.hover_view);
+        mHoverView.update(display.getWidth(), display.getHeight());
+
+        mCameraManager = new CameraManager(this);
+        mPreview = new CameraPreview(this, mCameraManager.getCamera());
+        mPreview.setArea(mHoverView.getHoverLeft(), mHoverView.getHoverTop(), mHoverView.getHoverAreaWidth(), display.getWidth());
+        FrameLayout preview = (FrameLayout) findViewById(R.id.camera_preview);
+        preview.addView(mPreview);
+
+        //getActionBar().hide();
     }
 
 

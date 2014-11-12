@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ShoppingApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="RegisterActivity">Register UI Activity</string>
+    <string name="LogInActivity">Log In UI Activity</string>
+    <string name="MainPageActivity">Main Landing Page UI Activity</string>
+
+</resources>

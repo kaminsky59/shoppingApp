@@ -19,6 +19,51 @@
             android:text="Registration"
             android:id="@+id/RegisterText"
             android:editable="false" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="FIrst Name"
+            android:id="@+id/FirstNameText"
+            android:editable="false"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20px"
+            android:layout_marginTop="20px" />
+
+        <EditText
+            android:layout_width="500px"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/FirstNameEditText"
+            android:background="@drawable/round"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight=".05"
+            android:editable="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Last Name"
+            android:id="@+id/LastNameText"
+            android:editable="false"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20px"
+            android:layout_marginTop="20px" />
+
+        <EditText
+            android:layout_width="500px"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/LastNameEditText"
+            android:background="@drawable/round"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight=".05"
+            android:editable="true" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -26,15 +71,20 @@
             android:text="Username"
             android:id="@+id/UserRegisterText"
             android:editable="false"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20px"
+            android:layout_marginTop="20px" />
 
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="500px"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
             android:id="@+id/userRegisterInput"
-            android:layout_gravity="center_horizontal" />
+            android:background="@drawable/round"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight=".05"
+            android:editable="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -44,15 +94,19 @@
             android:id="@+id/PassRegText"
             android:editable="false"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="10dp" />
+            android:layout_marginBottom="20px"
+            android:layout_marginTop="20px" />
 
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="500px"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
             android:ems="10"
             android:id="@+id/passRegisterInput"
-            android:layout_gravity="center_horizontal" />
+            android:background="@drawable/round"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight=".05"
+            android:editable="true" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,15 +116,19 @@
             android:id="@+id/emailRegText"
             android:editable="false"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="10dp" />
+            android:layout_marginBottom="20px"
+            android:layout_marginTop="20px" />
 
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="500px"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
             android:id="@+id/regEmailInput"
-            android:layout_gravity="center_horizontal" />
+            android:background="@drawable/round"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight=".05"
+            android:editable="true" />
 
         <LinearLayout
             android:orientation="horizontal"
